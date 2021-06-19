@@ -4,14 +4,17 @@
 </div>
 
 <div class="row text-layout">
+
     <div class="col s12 m6 padding5">
         <p-fieldset legend="i18Select Pipe" [toggleable]="true">
-            Content
+            Saludos {{nombre}}, es un placer {{genero | i18nSelect:invitacionObj}} a nuestro evento.
         </p-fieldset>
     </div>
+
     <div class="col s12 m6 padding5">
         <p-fieldset legend="i18nPuralpipe" [toggleable]="true">
             Content
         </p-fieldset>
     </div>
+
 </div>

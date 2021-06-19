@@ -7,6 +7,13 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./no-comunes.component.css'],
 })
 export class NoComunesComponent implements OnInit {
+  nombre: string = 'Leonardo';
+  genero: string = 'masculino';
+  invitacionObj = {
+    masculino: 'invitarlo',
+    femenino: 'invitarla',
+  };
+
   constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
