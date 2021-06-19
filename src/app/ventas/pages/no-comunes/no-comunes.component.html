@@ -9,12 +9,18 @@
         <p-fieldset legend="i18Select Pipe" [toggleable]="true">
             Saludos {{nombre}}, es un placer {{genero | i18nSelect:invitacionObj}} a nuestro evento.
         </p-fieldset>
+        <br>
+        <button pButton class="p-button-raised p-button-success" (click)="cambiarPersona()" label="Cambiar nombre">
+        </button>
     </div>
 
     <div class="col s2 m6">
         <p-fieldset legend="i18nPuralpipe" [toggleable]="true">
             Actualmente tenemos {{clientes.length | i18nPlural:clientesMap}} cliente esperando
         </p-fieldset>
+        <br>
+        <button pButton class="p-button-raised p-button-secondary" (click)="eliminarPersona()" label="Eliminar persona">
+        </button>
     </div>
 
 </div>

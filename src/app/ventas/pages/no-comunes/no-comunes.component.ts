@@ -8,11 +8,21 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class NoComunesComponent implements OnInit {
   nombre: string = 'Leonardo';
+
   genero: string = 'masculino';
+
   invitacionObj = {
     masculino: 'invitarlo',
     femenino: 'invitarla',
   };
+
+  clientesMap = {
+    '=0': 'no tenemos ningun cliente en esperando',
+    '=1': 'tenemos un cliente en esperando',
+    other: 'tenemos # clientes esperando',
+  };
+
+  clientes: string[] = ['Leonardo', 'Maria', 'Paola', 'Belen'];
 
   constructor(private primengConfig: PrimeNGConfig) {}
 
@@ -20,11 +30,17 @@ export class NoComunesComponent implements OnInit {
     this.primengConfig.ripple = true;
   }
 
-  clientes: string[] = ['Leonardo', 'Maria', 'Paola', 'Belen'];
+  cambiarPersona() {
+    if (this.genero === 'masculino') {
+      this.nombre = 'Paola Vizcano';
+      this.genero = 'femenino';
+    } else {
+      this.nombre = 'Leonardo Chuello';
+      this.genero = 'masculino';
+    }
+  }
 
-  clientesMap = {
-    '=0': 'no tenemos ningun cliente en esperando',
-    '=1': 'tenemos un ningun cliente en esperando',
-    other: 'tenemos # clientes esperando',
-  };
+  eliminarPersona() {
+    this.clientes = this.clientes.slice(1);
+  }
 }
