@@ -6,18 +6,18 @@
 </div>
 <div class="row text-layout">
     <div class="col s4">
-        <p-card header="uppercase" subheader="subheader">
-            Body
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase">
+            {{nombreLower | uppercase}}
         </p-card>
     </div>
     <div class="col s4">
-        <p-card header="header" subheader="subheader">
-            Body
+        <p-card header="lowercase" [subheader]="nombreLower | lowercase">
+            {{nombreLower | lowercase}}
         </p-card>
     </div>
     <div class="col s4">
-        <p-card header="header" subheader="subheader">
-            Body
+        <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+            {{nombreCompleto | titlecase}}
         </p-card>
     </div>
 </div>
