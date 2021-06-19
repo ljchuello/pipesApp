@@ -1,1 +1,11 @@
-<p>numeros works!</p>
+<div class="row text-layout">
+    <div class="col s12">
+        <h1>Pipes básicos</h1>
+        <p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
+    </div>
+    <div class="col s4">
+        <p-card header="Ventas neta" subheader="del presente año">
+            <i class="pi pi-dollar"></i> {{ventasNetas | number:'1.2-2'}}
+        </p-card>
+    </div>
+</div>
