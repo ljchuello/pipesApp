@@ -43,4 +43,10 @@ export class NoComunesComponent implements OnInit {
   eliminarPersona() {
     this.clientes = this.clientes.slice(1);
   }
+
+  persona = {
+    nombre: 'leonardo',
+    edad: 29,
+    direccion: 'Quito, Ecuador',
+  };
 }

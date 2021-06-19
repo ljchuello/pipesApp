@@ -33,9 +33,16 @@
             <br>
             <b>slice:1:2</b>
             <pre>{{clientes | slice:1:2}}</pre>
-            <br>
-            <b>slice:1:3</b>
-            <pre>{{clientes | slice:1:3}}</pre>
+        </p-fieldset>
+    </div>
+
+    <div class="col s12 m6 padding5">
+        <p-fieldset legend="Key Value Pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let row of persona | keyvalue">
+                    <b>{{row.key | titlecase}}:</b> {{row.value}}
+                </li>
+            </ul>
         </p-fieldset>
     </div>
 
