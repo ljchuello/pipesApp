@@ -9,4 +9,11 @@ export class BasicosComponent {
   nombreLower: string = 'leonardo';
   nombreUpper: string = 'LEONARDO';
   nombreCompleto: string = 'lEoNaRdO ChUelLo';
+  fecha: Date = new Date();
+
+  ngAfterContentChecked() {
+    setInterval(() => {
+      this.fecha = new Date();
+    }, 1000);
+  }
 }
