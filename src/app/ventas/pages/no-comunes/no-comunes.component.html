@@ -1,9 +1,13 @@
-<div class="text-layout">
-    <h1>Pipes no comunes</h1>
-    <p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
+<div class="row">
+    <div class="col s12">
+        <div class="text-layout">
+            <h1>Pipes no comunes</h1>
+            <p>Pipes incluidos en Angular - Usualmente en el Common Module</p>
+        </div>
+    </div>
 </div>
 
-<div class="row text-layout flex">
+<div class="row flex">
 
     <div class="col s12 m6 padding5">
         <p-fieldset legend="i18Select Pipe" [toggleable]="true">
@@ -49,6 +53,15 @@
     <div class="col s12 m6 padding5">
         <p-fieldset legend="Json Pipe" [toggleable]="true">
             <pre>{{heroes | json}}</pre>
+        </p-fieldset>
+    </div>
+
+    <div class="col s12 m6 padding5">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <pre *ngIf="!(miObservable | async)">Cargando...</pre>
+            <pre>{{miObservable | async}}</pre>
+            <pre *ngIf="!(valorPromesa | async)">Cargando...</pre>
+            <pre>{{valorPromesa | async}}</pre>
         </p-fieldset>
     </div>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -23,8 +24,6 @@ export class NoComunesComponent implements OnInit {
   };
 
   clientes: string[] = ['Leonardo', 'Maria', 'Paola', 'Belen'];
-
-  constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
     this.primengConfig.ripple = true;
@@ -64,4 +63,14 @@ export class NoComunesComponent implements OnInit {
       vuela: false,
     },
   ];
+
+  miObservable = interval(5000);
+
+  valorPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Tenemos data de promesa');
+    }, 3500);
+  });
+
+  constructor(private primengConfig: PrimeNGConfig) {}
 }
