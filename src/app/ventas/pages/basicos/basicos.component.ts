@@ -14,6 +14,6 @@ export class BasicosComponent {
   ngAfterContentChecked() {
     setInterval(() => {
       this.fecha = new Date();
-    }, 1000);
+    }, 1);
   }
 }
