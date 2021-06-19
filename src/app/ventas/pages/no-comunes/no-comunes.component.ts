@@ -49,4 +49,19 @@ export class NoComunesComponent implements OnInit {
     edad: 29,
     direccion: 'Quito, Ecuador',
   };
+
+  heroes = [
+    {
+      nombre: 'Superman',
+      vuela: true,
+    },
+    {
+      nombre: 'Iroman',
+      vuela: true,
+    },
+    {
+      nombre: 'Batman',
+      vuela: false,
+    },
+  ];
 }
