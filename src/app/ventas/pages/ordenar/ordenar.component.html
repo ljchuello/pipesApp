@@ -1,6 +1,8 @@
 <div class="row text-layout">
   <div class="col s12">
     <h1>Pipes Personalizados</h1>
-    <p>Pipes creados por {{'nostros' | mayusculas}}</p>
+    <p>Pipes creados por {{'nostros' | mayusculas:mayuscula}}</p>
   </div>
+  <button pButton pRipple label="Cambiar" class="p-button-raised p-button-secondary" (click)="cambiar()">
+  </button>
 </div>
