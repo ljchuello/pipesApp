@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-ordenar',
@@ -8,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 export class OrdenarComponent implements OnInit {
   mayuscula: boolean = true;
 
-  constructor() {}
+  items: MenuItem[] = [];
 
-  ngOnInit(): void {}
+  constructor() {
+  }
+
+  ngOnInit(): void {
+    this.items = [
+      {
+        label: 'Update',
+        icon: 'pi pi-refresh'
+      },
+      {
+        label: 'Delete',
+        icon: 'pi pi-times'
+      },
+      {
+        label: 'Angular',
+        icon: 'pi pi-external-link',
+        // url: 'http://angular.io'
+      },
+      {
+        label: 'Router',
+        icon: 'pi pi-upload',
+        // routerLink: '/fileupload'
+      }
+    ];
+  }
 
   cambiar() {
     if (this.mayuscula) {
