@@ -15,36 +15,36 @@
 
       <div class="p-toolbar-group-right">
         <button pButton
-                label="Cambiar"
+                label="Toggle mayuscula"
                 (click)="cambiar()">
         </button>
         &nbsp;
         <button pButton
                 class="p-button-help"
                 icon="pi pi-sort"
-                label="Toogle mayusculas"
-                (click)="cambiar()">
+                label="Por nombre"
+                (click)="cambiarOrden('nombre')">
         </button>
         &nbsp;
         <button pButton
                 class="p-button-success"
                 icon="pi pi-sort"
-                label="Valores"
-                (click)="cambiar()">
+                label="Vuela"
+                (click)="cambiarOrden('vuela')">
         </button>
         &nbsp;
         <button pButton
                 class="p-button-warning"
                 icon="pi pi-sort"
-                label="Valores"
-                (click)="cambiar()">
+                label="Color"
+                (click)="cambiarOrden('color')">
         </button>
       </div>
     </p-toolbar>
   </div>
 
   <div class="col s12 padding5">
-    <p-table [value]="heroes | ordenar">
+    <p-table [value]="heroes | ordenar:ordenarPor">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre</th>
