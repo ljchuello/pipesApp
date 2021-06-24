@@ -7,10 +7,10 @@ import {Heroe} from "../interfaces/ventas.interfaces";
 export class OrdenarPipe implements PipeTransform {
 
   transform(heroes: Heroe[], ordernar: string = 'sin valor'): Heroe[] {
+
     console.log(ordernar);
 
     switch (ordernar) {
-
       case 'nombre':
         return heroes.sort((a, b) => (a.nombre > b.nombre) ? 1 : -1);
 
