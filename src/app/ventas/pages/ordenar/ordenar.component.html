@@ -44,7 +44,7 @@
   </div>
 
   <div class="col s12 padding5">
-    <p-table [value]="heroes">
+    <p-table [value]="heroes | ordenar">
       <ng-template pTemplate="header">
         <tr>
           <th>Nombre</th>
