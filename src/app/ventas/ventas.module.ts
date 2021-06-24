@@ -8,6 +8,7 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 import { MayusculaPipe } from './pipes/mayusculas.pipe';
 import { MinusculaPipe } from './pipes/minuscula.pipe';
+import { VuelaPipe } from './pipes/vuela.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MinusculaPipe } from './pipes/minuscula.pipe';
     OrdenarComponent,
     MayusculaPipe,
     MinusculaPipe,
+    VuelaPipe,
   ],
   imports: [CommonModule, PrimeNgModule],
   exports: [
