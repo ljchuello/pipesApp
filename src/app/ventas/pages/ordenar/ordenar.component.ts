@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {Color, Heroe} from "../../interfaces/ventas.interfaces";
 
 @Component({
   selector: 'app-ordenar',
@@ -8,6 +9,34 @@ import {MenuItem} from "primeng/api";
 })
 export class OrdenarComponent implements OnInit {
   mayuscula: boolean = true;
+
+  heroes: Heroe[] = [
+    {
+      nombre: 'Superman',
+      vuela: true,
+      color: Color.Azul
+    },
+    {
+      nombre: 'Batman',
+      vuela: false,
+      color: Color.Negro
+    },
+    {
+      nombre: 'Robin',
+      vuela: false,
+      color: Color.Verde
+    },
+    {
+      nombre: 'Daredevil',
+      vuela: false,
+      color: Color.Rojo
+    },
+    {
+      nombre: 'Linterna Verde',
+      vuela: true,
+      color: Color.Verde
+    }
+  ]
 
   items: MenuItem[] = [];
 
@@ -38,10 +67,6 @@ export class OrdenarComponent implements OnInit {
   }
 
   cambiar() {
-    if (this.mayuscula) {
-      this.mayuscula = false;
-    } else {
-      this.mayuscula = true;
-    }
+    this.mayuscula = !this.mayuscula;
   }
 }
